@@ -1,6 +1,6 @@
-const infoRouter = require('../info/Rotes');
-const userRouter = require('../user/Rotes');
-const testRouter = require('../test/Rotes');
+const infoRouter = require('../info/Routes');
+const userRouter = require('../user/Routes');
+const testRouter = require('../test/Routes');
 
 function routes(app) {
   app.use('/info', infoRouter);

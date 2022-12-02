@@ -5,17 +5,15 @@ function createDiscipline(name) {
     name: name,
   });
 
-  newDiscipline
+  return newDiscipline
     .save()
-    .then(() => {
-      console.log('Discipline created');
+    .then((doc) => {
+      return doc._id;
     })
     .catch(() => {
       console.log('Discipline not created');
     })
-    .finally(() => {
-      console.log('END');
-    });
+    .finally(() => {});
 }
 
 module.exports = createDiscipline;
