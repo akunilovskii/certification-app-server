@@ -17,10 +17,7 @@ const AnswerSchema = new Schema({
 });
 
 const QuestionSchema = new Schema({
-  id: {
-    type: String,
-    required: true,
-  },
+  //TODO should be moved to user model
   selected: {
     type: Array,
     required: true,

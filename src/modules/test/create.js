@@ -22,15 +22,12 @@ function createTest(
 
   newTest
     .save()
-    .then(() => {
-      res.status(200).json('Test created');
+    .then((data) => {
+      return res.status(200).json(data);
     })
     .catch((err) => {
       console.log(err);
-      res.status(400).json('Test not created');
-    })
-    .finally(() => {
-      console.log('END');
+      return res.status(400).json('Test not created');
     });
 }
 
