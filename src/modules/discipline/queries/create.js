@@ -1,4 +1,4 @@
-const Discipline = require('./Model');
+const Discipline = require('../Model');
 
 function createDiscipline(name) {
   const newDiscipline = new Discipline({

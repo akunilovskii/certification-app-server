@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-const DisciplineSchema = new Schema({
+const SubjectSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -8,4 +8,4 @@ const DisciplineSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('Discipline', DisciplineSchema);
+module.exports = mongoose.model('Subject', SubjectSchema);

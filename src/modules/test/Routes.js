@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const createTest = require('./createTest');
+const createTest = require('./createTestController');
 const userGetAll = require('./userGetAll');
 const userGetByID = require('./userGetByID');
 const userUpdateByID = require('./userUpdateByID');
