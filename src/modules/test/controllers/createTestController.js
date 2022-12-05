@@ -1,8 +1,8 @@
-const Test = require('./Model');
-const getDisciplineID = require('../discipline/controllers/getID');
-const getLevelID = require('../level/controllers/getID');
-const getSubjectID = require('../subject/controllers/getID');
-const createTest = require('./create');
+const Test = require('../Model');
+const getDisciplineID = require('../../discipline/controllers/getID');
+const getLevelID = require('../../level/controllers/getID');
+const getSubjectID = require('../../subject/controllers/getID');
+const createTest = require('../queries/create');
 
 async function createTestController(req, res) {
   const { discipline, level, subject, test } = req.body.data;

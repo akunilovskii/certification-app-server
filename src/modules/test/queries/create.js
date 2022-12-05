@@ -1,4 +1,4 @@
-const Test = require('./Model');
+const Test = require('../Model');
 
 function createTest(
   disciplineID,

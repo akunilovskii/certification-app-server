@@ -1,6 +1,6 @@
 const { Router } = require('express');
-const createTest = require('./createTestController');
-const updateByID = require('./updateByID');
+const createTest = require('./controllers/createTestController');
+const updateByID = require('./queries/updateByID');
 const userGetAll = require('./userGetAll');
 const userGetByID = require('./userGetByID');
 const userDeleteByID = require('./userDeleteByID');
@@ -9,7 +9,6 @@ const router = Router();
 
 router.post('/create', createTest); // POST localhost:5000/tests/create
 router.put('/:testId', updateByID); // GET localhost:5000/user/userId as param
-
 
 // router.get('/', userGetAll); // GET localhost:5000/user
 // router.get('/:userId', userGetByID); // GET localhost:5000/user/userId as param
