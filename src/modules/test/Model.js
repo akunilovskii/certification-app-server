@@ -18,10 +18,10 @@ const AnswerSchema = new Schema({
 
 const QuestionSchema = new Schema({
   //TODO should be moved to user model
-  selected: {
-    type: Array,
-    required: true,
-  },
+  // selected: {
+  //   type: Array,
+  //   required: true,
+  // },
   question: {
     type: String,
     required: true,
