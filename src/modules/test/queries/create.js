@@ -1,33 +1,18 @@
+const message = require('../../utils/messages');
 const Test = require('../Model');
+const log = console.log;
 
-function createTest(
-  disciplineID,
-  levelID,
-  subjectID,
-  title,
-  difficulty,
-  duration,
-  questions,
-  res,
-) {
-  const newTest = new Test({
-    discipline: disciplineID,
-    level: levelID,
-    subject: subjectID,
-    title: title,
-    difficulty: difficulty,
-    duration: duration,
-    questions: questions,
-  });
-
-  newTest
+function createTest(values) {
+  const newTest = new Test({ ...values });
+  return newTest
     .save()
     .then((data) => {
-      return res.status(200).json(data);
+      log('Test created');
+      return message.success('Test created', data);
     })
     .catch((err) => {
-      console.log(err);
-      return res.status(400).json('Test not created');
+      log('Test not created', err);
+      return message.fail('Test not created', err);
     });
 }
 

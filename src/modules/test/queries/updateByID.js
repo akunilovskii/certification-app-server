@@ -1,16 +1,17 @@
+const message = require('../../utils/messages');
 const Test = require('../Model');
+const log = console.log;
 
-function updateByID(req, res) {
-  console.log(req.body.data.test.questions);
-  Test.findByIdAndUpdate({ _id: req.params.testId }, req.body.data.test, { new: true })
+function updateByID(id, data) {
+  return Test.findByIdAndUpdate({ _id: id }, data, { new: true })
     .exec()
     .then((data) => {
-      console.log('TEST updateById result: ', data);
-      return res.status(200).json(data);
+      log('Test updated');
+      return message.success('Test updated', data);
     })
     .catch((err) => {
-      console.log(err);
-      return res.status(400).json('Test update error');
+      log('Test not updated', err);
+      return message.fail('Test not updated', err);
     });
 }
 

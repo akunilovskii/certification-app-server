@@ -1,6 +1,6 @@
 const { Router } = require('express');
-const createTest = require('./controllers/createTestController');
-const updateByID = require('./queries/updateByID');
+const createTest = require('./controllers/create');
+const updateByID = require('./controllers/updateByID');
 const userGetAll = require('./userGetAll');
 const userGetByID = require('./userGetByID');
 const userDeleteByID = require('./userDeleteByID');
