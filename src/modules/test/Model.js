@@ -14,6 +14,7 @@ const AnswerSchema = new Schema({
     type: String,
     required: true,
   },
+
 });
 
 const QuestionSchema = new Schema({
@@ -30,36 +31,39 @@ const QuestionSchema = new Schema({
 });
 
 const TestSchema = new Schema({
-  discipline: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Discipline',
-    required: true,
+    discipline: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Discipline',
+      required: true,
+    },
+    subject: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Subject',
+      required: true,
+    },
+    level: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Level',
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    difficulty: {
+      type: String,
+      enum: ['', 'easy', 'standard', 'hard'],
+      default: '',
+      required: true,
+    },
+    duration: {
+      type: Number,
+      required: true,
+    },
+    questions: [QuestionSchema],
+
   },
-  subject: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Subject',
-    required: true,
-  },
-  level: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Level',
-    required: true,
-  },
-  title: {
-    type: String,
-    required: true,
-  },
-  difficulty: {
-    type: String,
-    enum: ['', 'easy', 'standard', 'hard'],
-    default: '',
-    required: true,
-  },
-  duration: {
-    type: Number,
-    required: true,
-  },
-  questions: [QuestionSchema],
-});
+  { timestamps: {}, versionKey: false },
+);
 
 module.exports = mongoose.model('Test', TestSchema);
