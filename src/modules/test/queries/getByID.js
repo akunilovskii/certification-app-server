@@ -2,9 +2,8 @@ const message = require('../../utils/messages');
 const Test = require('../Model');
 const log = console.log;
 
-function getAll() {
-  return Test.find()
-    .sort({ createdAt: -1 })
+function getByID(id) {
+  return Test.findById(id)
     .populate({
       path: 'discipline',
       select: 'name',
@@ -19,13 +18,13 @@ function getAll() {
     })
     .exec()
     .then((data) => {
-      log('Get all tests success');
-      return message.success('Get all tests success', data);
+      log('Get test by ID success');
+      return message.success('Get test by ID success', data);
     })
     .catch((err) => {
-      log('Get all tests fail', err);
-      return message.fail('Get all tests fail', err);
+      log('Get test by ID fail', err);
+      return message.fail('Get test by ID fail', err);
     });
 }
 
-module.exports = getAll;
+module.exports = getByID;
