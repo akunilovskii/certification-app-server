@@ -17,7 +17,7 @@ async function createTestController(req, res) {
     title: test.title,
     difficulty: test.difficulty,
     duration: +test.duration,
-    // questions: questions,
+    questions: test.questions,
   });
 
   if (createResult.success) {

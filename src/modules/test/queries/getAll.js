@@ -4,6 +4,7 @@ const log = console.log;
 
 function getAll() {
   return Test.find()
+    .lean()
     .sort({ createdAt: -1 })
     .populate({
       path: 'discipline',
@@ -15,7 +16,7 @@ function getAll() {
     })
     .populate({
       path: 'subject',
-      select: 'name',
+      select: 'name -_id',
     })
     .exec()
     .then((data) => {

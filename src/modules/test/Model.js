@@ -60,7 +60,7 @@ const TestSchema = new Schema(
       type: Number,
       required: true,
     },
-    // questions: [QuestionSchema],
+    questions: [QuestionSchema],
   },
   { timestamps: {}, versionKey: false },
 );
