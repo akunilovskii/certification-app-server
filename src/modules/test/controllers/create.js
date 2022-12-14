@@ -4,10 +4,11 @@ const getSubjectID = require('../../subject/controllers/getID');
 const createTest = require('../queries/create');
 
 async function createTestController(req, res) {
-  const { test } = req.body.data;
-  const level = await getLevelID(req.body.data.level);
-  const discipline = await getDisciplineID(req.body.data.discipline);
-  const subject = await getSubjectID(req.body.data.subject);
+  const test = req.body.data;
+  console.log(req.body.data);
+  const level = await getLevelID(test.level);
+  const discipline = await getDisciplineID(test.discipline);
+  const subject = await getSubjectID(test.subject);
 
   const createResult = await createTest({
     discipline,
@@ -15,8 +16,8 @@ async function createTestController(req, res) {
     subject,
     title: test.title,
     difficulty: test.difficulty,
-    duration: test.duration,
-    questions: test.questions,
+    duration: +test.duration,
+    // questions: questions,
   });
 
   if (createResult.success) {

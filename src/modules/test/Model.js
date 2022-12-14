@@ -14,7 +14,6 @@ const AnswerSchema = new Schema({
     type: String,
     required: true,
   },
-
 });
 
 const QuestionSchema = new Schema({
@@ -30,7 +29,8 @@ const QuestionSchema = new Schema({
   answers: [AnswerSchema],
 });
 
-const TestSchema = new Schema({
+const TestSchema = new Schema(
+  {
     discipline: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Discipline',
@@ -60,8 +60,7 @@ const TestSchema = new Schema({
       type: Number,
       required: true,
     },
-    questions: [QuestionSchema],
-
+    // questions: [QuestionSchema],
   },
   { timestamps: {}, versionKey: false },
 );
