@@ -16,7 +16,7 @@ function getAll() {
     })
     .populate({
       path: 'subject',
-      select: 'name -_id',
+      select: 'name',
     })
     .exec()
     .then((data) => {
