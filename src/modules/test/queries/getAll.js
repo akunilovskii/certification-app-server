@@ -3,7 +3,7 @@ const Test = require('../Model');
 const log = console.log;
 
 function getAll() {
-  return Test.find()
+  return Test.find({}, { createdAt: 0, updatedAt: 0 })
     .lean()
     .sort({ createdAt: -1 })
     .populate({

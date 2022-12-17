@@ -3,7 +3,7 @@ const Test = require('../Model');
 const log = console.log;
 
 function getByID(id) {
-  return Test.findById(id)
+  return Test.findById(id, { createdAt: 0, updatedAt: 0 } )
     .populate({
       path: 'discipline',
       select: 'name',
