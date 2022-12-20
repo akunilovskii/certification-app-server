@@ -1,4 +1,4 @@
-const User = require('./Model');
+const User = require('../../../backup/Model');
 
 function userRegister(req, res) {
   const newUser = new User({

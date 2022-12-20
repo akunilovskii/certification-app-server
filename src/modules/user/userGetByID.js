@@ -1,4 +1,4 @@
-const User = require('./Model');
+const User = require('../../../backup/Model');
 
 function userGetByID(req, res) {
   console.log(req.params.age);

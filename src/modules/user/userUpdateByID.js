@@ -1,4 +1,4 @@
-const User = require('./Model');
+const User = require('../../../backup/Model');
 
 function userUpdateByID(req, res) {
   const userId = req.params.userId;

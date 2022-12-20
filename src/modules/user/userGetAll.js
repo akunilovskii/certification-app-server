@@ -1,7 +1,9 @@
-const User = require('./Model');
+const User = require('../../../backup/Model');
 
 function userGetAll(req, res) {
-  User.find({/*email: 'test3@mail.com'*/})
+  User.find({
+    /*email: 'test3@mail.com'*/
+  })
     // .limit(2)
     // .skip(1)
     .exec()
