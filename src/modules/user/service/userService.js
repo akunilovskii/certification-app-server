@@ -15,22 +15,16 @@ class UserService {
 
     const hashPassword = await bcrypt.hash(password, 3);
 
-    // for empty Database
-    // const role = await Role.create({value: 'USER'})
-    // console.log('Created role: ', role);
+
     const userRole = await Role.findOne({ value: 'USER' }); //choose role USER for created user
 
-    // const userRole = new Role();
-    // const adminRole = new Role({ value: 'ADMIN' });
-    // await userRole.save();
-    // await adminRole.save();
+    if (!userRole) await Role.create([{ value: 'USER' }, { value: 'ADMIN' }]);
 
     const user = await UserModel.create({
       email,
       password: hashPassword,
-      roles: [userRole.value || 'USER'],
+      roles: [userRole?.value || 'USER'],
     });
-    console.log('------------------------------------------------Here: ');
 
     const userDto = new UserDto(user); //change user DTO
     const tokens = tokenService.generateTokens({ ...userDto });
