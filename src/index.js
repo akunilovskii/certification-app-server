@@ -1,8 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const home = require('./modules/home/home');
-const info = require('./modules/info/info'); //default export no needs {}
+// const home = require('./modules/home/home');
+// const info = require('./modules/info/info'); //default export no needs {}
 const errorHandler = require('./modules/core/errorHandler');
 const logger = require('./modules/core/logger');
 const parseResponse = require('./modules/core/parseResponse');
