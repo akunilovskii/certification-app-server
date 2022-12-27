@@ -4,8 +4,7 @@ const getSubjectID = require('../../subject/controllers/getID');
 const createTest = require('../queries/create');
 
 async function createTestController(req, res) {
-  const test = req.body.data;
-  console.log(req.body.data);
+  const test = req.body?.data || req;
   const level = await getLevelID(test.level);
   const discipline = await getDisciplineID(test.discipline);
   const subject = await getSubjectID(test.subject);
@@ -19,11 +18,12 @@ async function createTestController(req, res) {
     duration: +test.duration,
     questions: test.questions,
   });
-
-  if (createResult.success) {
-    res.status(200).json(createResult);
-  } else {
-    res.status(400).json('Test create error');
+  if (!!res) {
+    if (createResult.success) {
+      res.status(200).json(createResult);
+    } else {
+      res.status(400).json('Test create error');
+    }
   }
 }
 

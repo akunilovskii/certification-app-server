@@ -5,7 +5,6 @@ function dbConnect() {
   main().catch((err) => console.log(err));
 
   async function main() {
-    // await mongoose.connect('mongodb://localhost/certification_app');
     await mongoose.connect(process.env.MONGODB_REMOTE);
   }
 }
