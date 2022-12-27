@@ -29,8 +29,8 @@ const tests = JSON.parse(
 
 // IMPORT DATA INTO DATABASE
 
-const importData = () => {
-  tests.forEach(async (test) => {
+const importData = async () => {
+  for (const test of tests) {
     const level = await getLevelID(test.level);
     const discipline = await getDisciplineID(test.discipline);
     const subject = await getSubjectID(test.subject);
@@ -44,7 +44,7 @@ const importData = () => {
       duration: +test.duration,
       questions: test.questions,
     });
-  });
+  }
 };
 
 
