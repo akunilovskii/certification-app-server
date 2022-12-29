@@ -1,11 +1,12 @@
 require('dotenv').config();
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 const {
   errorHandler,
   logger,
   parseResponse,
-  cors,
+  // cors,
   routes,
   dbConnect,
 } = require('./modules/core/');
@@ -17,7 +18,15 @@ dbConnect();
 logger(app);
 app.use(cookieParser());
 parseResponse(app);
-cors(app);
+// cors(app);
+app.use(
+  cors({
+    credentials: true,
+    // origin: process.env.CLIENT_URL, //here is front-end address
+    origin: 'http://localhost:3000', //here is front-end address
+  }),
+);
+
 routes(app);
 app.use(errorMiddleware);
 

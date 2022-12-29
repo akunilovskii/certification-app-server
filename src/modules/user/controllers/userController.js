@@ -1,5 +1,6 @@
 const userService = require('../service/userService');
 const ApiError = require('../exceptions/apiError');
+const tokenService = require('../service/tokenService');
 
 class UserController {
   async register(req, res, next) {
@@ -33,9 +34,23 @@ class UserController {
   async logout(req, res, next) {
     try {
       const { refreshToken } = req.cookies;
+      console.log('💥💥💥💥💥💥💥💥💥💥💥💥💥', refreshToken);
       const token = await userService.logout(refreshToken);
       res.clearCookie('refreshToken');
       return res.json(token);
+    } catch (e) {
+      next(e);
+    }
+  }
+
+  async profile(req, res, next) {
+    try {
+      const accessToken = req.headers.authorization.split(' ')[1];
+      // const { refreshToken } = req.cookies;
+      // const userData = await userService.refresh(refreshToken);
+      console.log(accessToken);
+      const userData = await tokenService.validateAccessToken(accessToken);
+      return res.json(userData);
     } catch (e) {
       next(e);
     }
