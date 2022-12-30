@@ -6,9 +6,10 @@ const getByID = require('./controllers/getByID');
 const deleteByID = require('./controllers/deleteById');
 // const userDeleteByID = require('./userDeleteByID');
 // const userDeleteAll = require('./userDeleteAll');
+const authMiddleware = require('../user/middlewares/authMiddleware')
 const router = Router();
 
-router.post('/create', createTest);
+router.post('/create', authMiddleware, createTest);
 router.put('/:testId', updateByID);
 router.get('/', getAll);
 router.get('/:testId', getByID);

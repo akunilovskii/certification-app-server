@@ -4,7 +4,7 @@ const getSubjectID = require('../../subject/controllers/getID');
 const createTest = require('../queries/create');
 
 async function createTestController(req, res) {
-  const test = req.body?.data || req;
+  const test = req.body || req;
   const level = await getLevelID(test.level);
   const discipline = await getDisciplineID(test.discipline);
   const subject = await getSubjectID(test.subject);
