@@ -5,10 +5,10 @@ const getSubjectID = require('../../subject/controllers/getID');
 
 async function updateByIDController(req, res) {
   const testID = req.params.testId;
-  const test = req.body.data;
+  const test = req.body;
 
-  console.log('UPDATE id: ', testID)
-  console.log('UPDATE data: ', test)
+  console.log('UPDATE id: ', testID);
+  console.log('UPDATE data: ', test);
 
   const level = await getLevelID(test.level);
   const discipline = await getDisciplineID(test.discipline);
