@@ -7,7 +7,7 @@ const AnswerSchema = new Schema({
     required: true,
   },
   correct: {
-    type: String,
+    type: Boolean,
     required: true,
   },
 });

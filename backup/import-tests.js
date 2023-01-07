@@ -17,7 +17,7 @@ const tests = JSON.parse(fs.readFileSync('tests-list.json', 'utf-8'));
 // IMPORT DATA INTO DATABASE
 
 const importData = async () => {
-  for await (const test of tests) createTest(test);
+  for (const test of tests) await createTest(test);
   process.exit();
 };
 

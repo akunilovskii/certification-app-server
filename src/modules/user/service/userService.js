@@ -45,12 +45,11 @@ class UserService {
     const tokens = tokenService.generateTokens({ ...userDto });
     await tokenService.saveToken(userDto.id, tokens.refreshToken);
 
-    return { ...tokens, user: userDto };
+    return { ...tokens, ...userDto };
   }
 
   async logout(refreshToken) {
-    const token = await tokenService.removeToken(refreshToken);
-    return token;
+    return await tokenService.removeToken(refreshToken);
   }
 
   async refresh(refreshToken) {
@@ -68,12 +67,11 @@ class UserService {
     const tokens = tokenService.generateTokens({ ...userDto });
     await tokenService.saveToken(userDto.id, tokens.refreshToken);
 
-    return { ...tokens, user: userDto };
+    return { ...tokens, ...userDto };
   }
 
   async getAllUsers() {
-    const users = await UserModel.find();
-    return users;
+    return await UserModel.find();
   }
 }
 
