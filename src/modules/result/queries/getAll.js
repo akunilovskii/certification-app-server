@@ -4,6 +4,10 @@ const log = console.log;
 
 function getAll(userId) {
   return Result.find({ user: userId })
+    .populate({
+      path: 'test',
+      select: 'title',
+    })
     .then((data) => {
       log({ data });
       return message.success('Get all results success', data);
