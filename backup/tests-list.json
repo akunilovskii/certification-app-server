@@ -9,6 +9,7 @@
     "questions": [
       {
         "question": "2 + 2",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 3,
@@ -30,6 +31,7 @@
       },
       {
         "question": "4 + 2",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 9,
@@ -51,6 +53,7 @@
       },
       {
         "question": "4 + 8",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 6,
@@ -82,6 +85,7 @@
     "questions": [
       {
         "question": "2 * 2",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 8,
@@ -103,6 +107,7 @@
       },
       {
         "question": "4 * 2",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 9,
@@ -124,6 +129,7 @@
       },
       {
         "question": "4 * 4",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 18,
@@ -155,6 +161,7 @@
     "questions": [
       {
         "question": "2 / 2",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 3,
@@ -176,6 +183,7 @@
       },
       {
         "question": "4 / 2",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 4,
@@ -197,6 +205,7 @@
       },
       {
         "question": "4 / 4",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 2,
@@ -228,6 +237,7 @@
     "questions": [
       {
         "question": "8 - 2",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 4,
@@ -249,6 +259,7 @@
       },
       {
         "question": "7 - 2",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 4,
@@ -280,6 +291,7 @@
     "questions": [
       {
         "question": "Oxygen",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": "S2",
@@ -301,6 +313,7 @@
       },
       {
         "question": "Water",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": "HO2",
@@ -332,6 +345,7 @@
     "questions": [
       {
         "question": "How many angles does Triangle have",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 2,
@@ -353,6 +367,7 @@
       },
       {
         "question": "How many angles does Circle have",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 3,
@@ -374,6 +389,7 @@
       },
       {
         "question": "How many angles does Rectangle have",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 2,
@@ -405,6 +421,7 @@
     "questions": [
       {
         "question": "12 + 22",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 32,
@@ -426,6 +443,7 @@
       },
       {
         "question": "14 + 32",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 48,
@@ -447,6 +465,7 @@
       },
       {
         "question": "24 + 18",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 39,
@@ -478,6 +497,7 @@
     "questions": [
       {
         "question": "12 * 6",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 74,
@@ -499,6 +519,7 @@
       },
       {
         "question": "40 * 2",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 90,
@@ -520,6 +541,7 @@
       },
       {
         "question": "14 * 12",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 160,
@@ -541,6 +563,7 @@
       },
       {
         "question": "10 * 12",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 130,
@@ -562,6 +585,7 @@
       },
       {
         "question": "14 * 10",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 150,
@@ -593,6 +617,7 @@
     "questions": [
       {
         "question": "121 / 11",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 12,
@@ -614,6 +639,7 @@
       },
       {
         "question": "428 / 2",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 234,
@@ -635,6 +661,7 @@
       },
       {
         "question": "250 / 5",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 60,
@@ -666,6 +693,7 @@
     "questions": [
       {
         "question": "18 - 8",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 14,
@@ -687,6 +715,7 @@
       },
       {
         "question": "70 - 30",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 30,
@@ -708,6 +737,7 @@
       },
       {
         "question": "48 - 26",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 26,
@@ -729,6 +759,7 @@
       },
       {
         "question": "28 - 26",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 4,
@@ -760,6 +791,7 @@
     "questions": [
       {
         "question": "6 + 1",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 3,
@@ -781,6 +813,7 @@
       },
       {
         "question": "6 + 12",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 22,
@@ -812,6 +845,7 @@
     "questions": [
       {
         "question": "2 * 3",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 7,
@@ -833,6 +867,7 @@
       },
       {
         "question": "4 * 10",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 44,
@@ -854,6 +889,7 @@
       },
       {
         "question": "14 * 2",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 24,
@@ -885,6 +921,7 @@
     "questions": [
       {
         "question": "20 / 2",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 11,
@@ -906,6 +943,7 @@
       },
       {
         "question": "14 / 2",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 4,
@@ -937,6 +975,7 @@
     "questions": [
       {
         "question": "18 - 12",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 4,
@@ -958,6 +997,7 @@
       },
       {
         "question": "17 - 5",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 9,
@@ -979,6 +1019,7 @@
       },
       {
         "question": "14 - 4",
+        "shouldSelect": 1,
         "answers": [
           {
             "text": 12,
@@ -994,6 +1035,86 @@
           },
           {
             "text": 10,
+            "correct": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "discipline": "Geography",
+    "level": "Grade 6",
+    "subject": "Flags G6",
+    "title": "Colors of European flags",
+    "difficulty": "easy",
+    "duration": 10,
+    "questions": [
+      {
+        "question": "What colors are on Polish flag",
+        "shouldSelect": 2,
+        "answers": [
+          {
+            "text": "White",
+            "correct": true
+          },
+          {
+            "text": "Black",
+            "correct": false
+          },
+          {
+            "text": "Yellow",
+            "correct": false
+          },
+          {
+            "text": "Red",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "question": "What colors are on French flag",
+        "shouldSelect": 3,
+        "answers": [
+          {
+            "text": "Green",
+            "correct": false
+          },
+          {
+            "text": "White",
+            "correct": true
+          },
+          {
+            "text": "Red",
+            "correct": true
+          },
+          {
+            "text": "Blue",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "question": "What colors are on Italian flag",
+        "shouldSelect": 3,
+        "answers": [
+          {
+            "text": "Red",
+            "correct": true
+          },
+          {
+            "text": "Yellow",
+            "correct": false
+          },
+          {
+            "text": "Blue",
+            "correct": false
+          },
+          {
+            "text": "White",
+            "correct": true
+          },
+          {
+            "text": "Green",
             "correct": true
           }
         ]

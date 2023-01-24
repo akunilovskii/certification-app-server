@@ -17,6 +17,10 @@ const QuestionSchema = new Schema({
     type: String,
     required: true,
   },
+  shouldSelect: {
+    type: Number,
+    required: true,
+  },
   answers: [AnswerSchema],
 });
 
