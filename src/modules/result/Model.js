@@ -19,7 +19,7 @@ const ResultSchema = new Schema(
           type: String,
           required: true,
         },
-        answer: [
+        answers: [
           {
             type: String,
             required: true,
