@@ -26,6 +26,11 @@ const QuestionSchema = new Schema({
 
 const TestSchema = new Schema(
   {
+    owner: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
     discipline: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Discipline',

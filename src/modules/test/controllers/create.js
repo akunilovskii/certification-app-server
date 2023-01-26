@@ -5,11 +5,13 @@ const createTest = require('../queries/create');
 
 async function createTestController(req, res) {
   const test = req.body || req;
+  const owner = req.user?.id || test.owner;
   const level = await getLevelID(test.level);
   const discipline = await getDisciplineID(test.discipline);
   const subject = await getSubjectID(test.subject);
 
   const createResult = await createTest({
+    owner,
     discipline,
     level,
     subject,

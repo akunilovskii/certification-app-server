@@ -16,8 +16,11 @@ const tests = JSON.parse(fs.readFileSync('tests-list.json', 'utf-8'));
 
 // IMPORT DATA INTO DATABASE
 
+const ownerId = process.env.TEST_OWNER_ID;
 const importData = async () => {
-  for (const test of tests) await createTest(test);
+  for (const test of tests) {
+    await createTest({ ...test, owner: ownerId });
+  }
   process.exit();
 };
 
