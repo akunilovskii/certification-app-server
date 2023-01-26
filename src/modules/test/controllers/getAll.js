@@ -1,7 +1,8 @@
 const getAll = require('../queries/getAll');
 
 async function getAllController(req, res) {
-  const getResult = await getAll();
+  const owner = req.user.id;
+  const getResult = await getAll({ owner });
 
   if (getResult.success) {
     res.status(200).json(getResult);
