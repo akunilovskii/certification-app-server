@@ -1,6 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const mongoSanitize = require('express-mongo-sanitize');
+
 // const cors = require('cors');
 const {
   errorHandler,
@@ -19,6 +21,7 @@ logger(app);
 app.use(cookieParser());
 parseResponse(app);
 cors(app);
+app.use(mongoSanitize());
 // app.use(
 //   cors({
 //     credentials: true,
