@@ -1,18 +1,20 @@
 const userService = require('../service/userService');
 const ApiError = require('../exceptions/apiError');
 const tokenService = require('../service/tokenService');
+const importData = require('../../init/import-tests');
 
 class UserController {
   async register(req, res, next) {
     try {
-      const { email, password } = req.body;
-      const userData = await userService.registration(email, password);
+      const { email, password, role } = req.body;
+      const userData = await userService.registration(email, password, role);
       res.cookie('refreshToken', userData.refreshToken, {
         maxAge: 30 * 24 * 60 * 60 * 1000,
         httpOnly: true,
         sameSite: 'none',
         secure: true
       });
+      await importData(userData.id);
       return res.json(userData);
     } catch (e) {
       next(e);
