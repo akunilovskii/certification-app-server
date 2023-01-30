@@ -6,7 +6,7 @@ const Role = require('../models/roleModel');
 const ApiError = require('../exceptions/apiError');
 
 class UserService {
-  async registration(email, password) {
+  async registration(email, password, role) {
     const candidate = await UserModel.findOne({ email });
 
     if (candidate) {
@@ -15,7 +15,7 @@ class UserService {
 
     const hashPassword = await bcrypt.hash(password, 3);
 
-    const userRole = await Role.findOne({ value: 'USER' }); //choose role USER for created user
+    const userRole = await Role.findOne({ value: role }); //choose role USER for created user
 
     if (!userRole) await Role.create([{ value: 'USER' }, { value: 'ADMIN' }]);
 

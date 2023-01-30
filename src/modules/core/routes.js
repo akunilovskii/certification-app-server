@@ -3,6 +3,7 @@ const testRouter = require('../test/Routes');
 const resultRouter = require('../result/Routes');
 
 function routes(app) {
+  app.use('/', (req, res) => res.status(200).send('Server is running'));
   app.use('/user', userRouter);
   app.use('/test', testRouter);
   app.use('/result', resultRouter);
