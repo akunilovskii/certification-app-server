@@ -1,8 +1,8 @@
 # React CertificationAPP (BackEnd)
 
-### _Open deployed app [CertificationAPP](https://certification-app-client-xi.vercel.app/)_
+### _Open deployed app [CertificationAPP](https://certification-app-client.vercel.app/)_
 
-### _Open deployed app [Back-End](https://certification-app-server-xi.vercel.app/)_
+### _Open deployed app [Back-End](https://certification-app-server.vercel.app/)_
 
 This is the Back End part of the CertificationAPP Full-Stack project designed to service API request from Front-End to
 create, update and delete tests.
@@ -13,7 +13,7 @@ Create MongoDB cluster if you do not have it.
 1. Clone this repo
 
 ```sh
-git clone https://github.com/Mike10581/CertificationApp_Server.git
+git clone https://github.com/akunilovskii/certification-app-server
 ```
 
 2. Install required packages.
